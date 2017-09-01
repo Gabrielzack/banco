@@ -6,14 +6,12 @@
 
     $minhaConta -> dono = "Zackerson";
     $minhaConta -> cpf = "05777252974";
-    $minhaConta -> deposita(12500);
+    $minhaConta -> deposita(3000);
 
-    $minhaConta -> saca(500);
+    $conta2 = new Conta();
+    $conta2 -> dono = "ICarly";
+    $conta2 -> deposita(999999999);
 
-    $contaMae = new Conta();
-    $contaMae -> dono = "ICarly";
+    $minhaConta -> transferePara($conta2, 1);  //SET-Info, GET - SABER
 
-    $minhaConta -> transferePara($contaMae, 3000);
-
-    print "O cliente {$minhaConta->dono} tem {$minhaConta->getSaldo()} de saldo, e o cliente {$contaMae->dono} tem {$contaMae->getSaldo()}";
-
+    print "O cliente {$minhaConta->dono} tem {$minhaConta->mostra()} de saldo, e o cliente {$conta2->dono} tem {$conta2->mostra()}";

@@ -8,18 +8,24 @@ class Conta
     private $saldo = 0;
     public $limite;
 
-    public function getSaldo(): float{
+    public function mostra(): float{
         return $this->saldo;
     }
 
 
-
     public  function deposita(float $valor){
+        if ($valor > 0){
         $this-> saldo += $valor;
+        return true;
+
+        }else{
+        return false;
+        }
     }
 
-    public function saca(float $valor){
-        if ($valor <= $this->saldo){
+
+    public function saca(float $valor): bool {
+        if ($valor < $this->saldo){
             $this-> saldo -= $valor;
             return true;
         }else{
@@ -28,7 +34,7 @@ class Conta
 
     }
     public function transferePara(Conta $contaDestino, float $valor){
-        //sacar o money da minha conta
+
         $deuCerto = $this-> saca ($valor);
 
         if ($deuCerto){
