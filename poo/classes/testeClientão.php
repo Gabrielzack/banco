@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 13/09/17
- * Time: 16:20
- */
+
+    require_once "clientão.php";
+
+    $clientaoJunior = new Clientão();
+    $clientaoJunior->nome;
