@@ -8,7 +8,33 @@
  */
 class clientão
 {
-    public $nome;
+    private $nome;
     public $cpf;
     public $enderco;
+
+    /**
+     * @return mixed
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param mixed $nome
+     */
+    public function setNome(string $nome)
+    {
+        $this->nome = $nome;
+        if (strlen($nome) > 1);
+    }
+
+
+
+
+
 }
+
+
+
+
