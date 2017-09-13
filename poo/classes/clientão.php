@@ -8,5 +8,7 @@
  */
 class clientão
 {
-
+    public $nome;
+    public $cpf;
+    public $enderco;
 }
